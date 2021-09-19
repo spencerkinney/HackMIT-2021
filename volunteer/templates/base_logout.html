@@ -23,7 +23,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
-      <a class="navbar-brand" href="#">NAME</a>
+      <a class="navbar-brand" href="{{ request.scheme }}://{{ request.get_host }}"><b>VolunteerU</b></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -39,13 +39,14 @@
       <div class="collapse navbar-collapse" id="navbarsExample09">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <button type="button" class="btn btn-light">Logout</button>
+            <a href="{{ request.scheme }}://{{ request.get_host }}">
+              <button type="button" class="btn btn-light">Logout</button>
+            </a>
           </li>
         </ul>
-        <p class="lead">Welcome back, Fira</p>
       </div>
     </nav>
-    <div class="container container-small">
+    <div class="container {% if not request.get_full_path == "/dashboard" %}container-small{% endif %}">
       <div class="mainContent">{% block content %} {% endblock %}</div>
 
       <!-- Optional JavaScript -->

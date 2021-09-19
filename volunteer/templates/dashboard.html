@@ -1,5 +1,156 @@
-{% extends "base_logout.html" %}
+{% extends "base_logout.html" %} {% block content %}
+<div class="row">
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header">
+        <h4>Applications Received</h4>
+      </div>
+      <div class="card-body">
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button
+                  class="btn btn-link"
+                  data-toggle="collapse"
+                  data-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  Volunteer at Animal Shelter
+                </button>
+              </h5>
+            </div>
 
-{% block content %}
-<h2>APPLY</h2>
-{% endblock %}
+            <div
+              id="collapseOne"
+              class="collapse show"
+              aria-labelledby="headingOne"
+              data-parent="#accordion"
+            >
+              <div class="card-body">
+                First Name: <br />
+                Last Name: <br />
+                Email:<br />
+                Phone number:
+              </div>
+              <div class="card-body">
+                First Name:<br />
+                Last Name:<br />
+                Email:<br />
+                Phone number:
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  data-toggle="collapse"
+                  data-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  Volunteer at Public Library
+                </button>
+              </h5>
+            </div>
+            <div
+              id="collapseTwo"
+              class="collapse"
+              aria-labelledby="headingTwo"
+              data-parent="#accordion"
+            >
+              <div class="card-body">
+                First Name: <br />
+                Last Name: <br />
+                Email:<br />
+                Phone number:
+              </div>
+              <div class="card-body">
+                First Name:<br />
+                Last Name:<br />
+                Email:<br />
+                Phone number:
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header">
+        <h4>Volunteer Work Postings</h4>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-8">
+            <h4>Volunteer at the Animal Shelter!</h4>
+            <p class="lead">
+              Post ID: 203245 <br />
+              Organization name: Animal Shelter
+            </p>
+          </div>
+          <div class="col-md-4">
+            <a href="/dashboard/edit">edit</a>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-8">
+            <h4>Volunteer at Public Library</h4>
+            <p class="lead">
+              Post ID: 203245 <br />
+              Organization name: Animal Shelter
+            </p>
+          </div>
+          <div class="col-md-4">
+            <a href="/dashboard/edit">edit</a>
+          </div>
+        </div>
+      </div>
+      <hr/>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-8">
+            <h4>Student Gardening Volunteer</h4>
+            <p class="lead">
+              Post ID: 203245 <br />
+              Organization name: Animal Shelter
+            </p>
+          </div>
+          <div class="col-md-4">
+            <a href="/dashboard/edit">edit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header">
+        <h4>Profile Information</h4>
+      </div>
+      <div class="card-body">
+        <img
+          class="card-img img-fluid img-thumbnail top rounded-corners"
+          src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTgwMTgyMTgzOTk3MDg4ODkw/gettyimages-483195065.jpg"
+          alt="Elon Musk"
+        />
+        <div class="card-body">
+          <p class="card-text">
+            Welcome Back, <b>Fira</b><br />
+            <b>Phone:</b> xxx-xxx-xxx <br />
+            <b>Email:</b> xxxxx@gmail.com
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+</div>

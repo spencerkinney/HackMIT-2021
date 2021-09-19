@@ -27,4 +27,5 @@ urlpatterns = [
     path('dashboard/add/', views.dashboard_add),
     path('dashboard/edit/', views.dashboard_edit),
     path('register', views.register),
+    path('dashboard', views.dashboard)
 ]
