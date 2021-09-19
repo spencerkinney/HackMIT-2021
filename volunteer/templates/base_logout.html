@@ -39,9 +39,12 @@
       <div class="collapse navbar-collapse" id="navbarsExample09">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a href="{{ request.scheme }}://{{ request.get_host }}">
-              <button type="button" class="btn btn-light">Logout</button>
-            </a>
+            <form action="{% url 'logoutUser' %}" method="post">
+              {% csrf_token %}
+              <a href="/logout">
+                <button type="type" class="btn btn-light">Logout</button>
+              </a>
+            </form>
           </li>
         </ul>
       </div>

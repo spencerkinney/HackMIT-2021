@@ -1,61 +1,25 @@
 {% extends "base_name.html" %} {% block content %}
 <div class="form-signin">
-    <form>
-      <h1 class="heading5">Register</h1>
-      <br/>
-      <div class="form-group">
-        <div class="form-row">
-          <div class="col">
-            <input type="text" class="form-control" placeholder="First name" />
-          </div>
-          <div class="col">
-            <input type="text" class="form-control" placeholder="Last name" />
-          </div>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="phoneNumberInput">Phone number</label>
-        <input
-          type="tel"
-          maxlength="10"
-          class="form-control"
-          id="phoneNumber"
-          placeholder="xxxxxxxxxx"
-        />
-      </div>
-
-      <div class="form-group form-floating">
-        <label for="floatingInput">Email address</label>
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      </div>
-      <div class="form-group form-floating">
-        <label for="floatingPassword">Password</label>
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-      </div>
-      <div class="form-group form-floating">
-        <label for="floatingPassword">Confirm Password</label>
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-      </div>
-      <select
-        class="register_select"
-        aria-label="Default select example"
-      >
-        <option selected>Select your university</option>
-        <option value="1">MIT </option>
-        <option value="2">two</option>
-        <option value="3">Three</option>
-      </select>
-      <div class="form-group">
-        <label for="floatingInput">Profile picture</label>
-        <input type="file" class="form-control" id="floatingInput" placeholder="name@example.com">
-      </div>
-      <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+  <form enctype="multipart/form-data" method="POST">
+    {% csrf_token %}
+    {% for field in form %}
+      <p>
+        {{ field.label_tag }}<br>
+        {{ field }}
+        {% if field.help_text %}
+          <small style="color: grey">{{ field.help_text }}</small>
+        {% endif %}
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+    {% endfor %}
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
       
-      <div>
-        </br>
-          <p>Already have an account yet? <a href="/login">Login</a></p>
-      </div>
-    </form>
+    <div>
+      </br>
+        <p>Already have an account yet? <a href="/login">Login</a></p>
+    </div>
+  </form>
 </div>
 {% endblock %}

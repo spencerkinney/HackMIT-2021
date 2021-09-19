@@ -137,16 +137,18 @@
         <h4>Profile Information</h4>
       </div>
       <div class="card-body">
+        {% if user.profile.picture %}
         <img
           class="card-img img-fluid img-thumbnail top rounded-corners"
-          src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTgwMTgyMTgzOTk3MDg4ODkw/gettyimages-483195065.jpg"
+          src="{{ user.profile_picture.url }}"
           alt="Elon Musk"
         />
+        {% endif %}
         <div class="card-body">
           <p class="card-text">
-            Welcome Back, <b>Fira</b><br />
-            <b>Phone:</b> xxx-xxx-xxx <br />
-            <b>Email:</b> xxxxx@gmail.com
+            Welcome Back, <b>{{ user.first_name }}</b><br />
+            <b>Phone:</b> {{user.phone_number}} <br />
+            <b>Email:</b> {{ user.email }}
           </p>
         </div>
       </div>
