@@ -34,21 +34,10 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <div class="collapse navbar-collapse" id="navbarsExample09">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <button type="button" class="btn btn-light">Login</button>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-md-0">
-            <input class="form-control navbar_search" type="text" placeholder="Search">
-          </form>
-      </div>
     </nav>
-    <div class="container">
-      <div class="mainContent">{% block content %} {% endblock %}</div>
-
+    <div class="container container-small">
+        <div class="mainContent">{% block content %} {% endblock %}</div>
+    </div>
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <script
@@ -67,5 +56,7 @@
         crossorigin="anonymous"
       ></script>
     </div>
+    
   </body>
+  
 </html>

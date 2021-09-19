@@ -21,4 +21,10 @@ from website import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
+    path('results/', views.results),
+    path('login/', views.login),
+    path('apply/', views.apply),
+    path('dashboard/add/', views.dashboard_add),
+    path('dashboard/edit/', views.dashboard_edit),
+    path('register', views.register),
 ]

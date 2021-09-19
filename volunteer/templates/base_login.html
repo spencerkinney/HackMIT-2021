@@ -21,42 +21,30 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
-        <a class="navbar-brand" href="#">NAME</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarsExample09"
-          aria-controls="navbarsExample09"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+      <a class="navbar-brand" href="#">NAME</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarsExample09"
+        aria-controls="navbarsExample09"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <div class="collapse navbar-collapse" id="navbarsExample09">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#"
-                ><font style="vertical-align: inherit"
-                  ><font style="vertical-align: inherit">Login </font></font
-                ><span class="sr-only"
-                  ><font style="vertical-align: inherit"
-                    ><font style="vertical-align: inherit"
-                      >(current)</font
-                    ></font
-                  ></span
-                ></a
-              >
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <div class="mainContent">{% block content %}
-        
-        {% endblock %}</div>
+      <div class="collapse navbar-collapse" id="navbarsExample09">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <button type="button" class="btn btn-light">Login</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container container-small">
+      <div class="mainContent">{% block content %} {% endblock %}</div>
 
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->

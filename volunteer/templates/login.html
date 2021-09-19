@@ -1,5 +1,23 @@
-{% extends "base.html" %}
-
-{% block content %}
-<h2>APPLY</h2>
+{% extends "base_name.html" %} {% block content %}
+<div class="form-signin">
+    <form>
+      <h1 class="heading5">Login</h1>
+  
+      <div class="form-group form-floating">
+        <label for="floatingInput">Email address</label>
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        
+      </div>
+      <div class="form-group form-floating">
+        <label for="floatingPassword">Password</label>
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+      
+      <div>
+        </br>
+          <p>Don’t have an account yet? <a href="/register">Register</a></p>
+      </div>
+    </form>
+</div>
 {% endblock %}
