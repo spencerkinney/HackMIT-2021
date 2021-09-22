@@ -10,7 +10,7 @@ For this project some of the features that we developed include:
 - Ability for volunteer seekers to scroll through volunteer postings and contact poster
 
 
-## Screenshots
+## Couple of Screenshots
 
 ![screenshot1](https://user-images.githubusercontent.com/68272505/134420906-04c490c8-9da9-4854-817f-25481b9191bd.png)
 
