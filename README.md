@@ -6,6 +6,7 @@ The application was developed to connect students and faculty within universitie
 
 For this project some of the features that we developed include:
 - Ability for volunteer job posters to login and register for an account
+- Ability for volunteer job posters to create their profile with their associated university and profile picture
 - Volunteer poster dashboard where all useful functionality is located
 - Ability for volunteer seekers to scroll through volunteer postings and contact poster
 
